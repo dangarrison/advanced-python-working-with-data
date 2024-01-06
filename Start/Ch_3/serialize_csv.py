@@ -23,7 +23,7 @@ header = ["Place", "Magnitude", "Link", "Date"]
 rows = []
 # TODO: populate the rows with the resulting quake data
 for quake in largequakes:
-    thedate = datetime.date.fromtimestamp(int(quake["properties"]["time"]/100))
+    thedate = datetime.date.fromtimestamp(int(quake["properties"]["time"]/1000))
     rows.append([quake["properties"]["place"],
                  quake["properties"]["mag"],
                  quake["properties"]["url"],
